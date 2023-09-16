@@ -1,14 +1,13 @@
-# Train CIFAR10 with Tensorflow 
-cifar100 will be added later
+# Train CIFAR10/Cifar100 with Tensorflow 2
+
 
 
 | Model           | Acc.    |
 |-----------------|---------|
-| VGG16           | 92.64%  |
-| ResNet18        | 93.02%  |
-| ResNet50        | 93.62%  |
-| ResNet101       | 93.75%  |
-| MobileNetV2     | 94.43%  |
-| DenseNet121     | 95.04%  |
-| DPN92           | 95.16%  |
+| ResNet18        | ------  |
+| ResNet50        | ------  |
+| ResNet101       | ------  |
+| MobileNetV2     | ------  |
+| DenseNet121     | ------  |
+| VGG16           | ------  |
 
