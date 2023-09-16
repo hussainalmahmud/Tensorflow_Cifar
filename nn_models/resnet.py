@@ -60,7 +60,7 @@ class ResNet:
         self.num_classes = num_classes
         self.use_bottleneck = variant in ['resnet50', 'resnet101', 'resnet152']
         
-    def build(self, input_shape=(224, 224, 3)):
+    def build(self, input_shape=(32, 32, 3)):
         input_tensor = Input(shape=input_shape)
         x = Conv2D(64, (7, 7), padding="same", strides=2)(input_tensor)
         x = BatchNormalization()(x)

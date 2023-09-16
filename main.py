@@ -2,8 +2,7 @@ import os
 import click
 import tensorflow as tf
 import pandas as pd
-
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 from data_utils import read_data, data_augmentation_generator
 from nn_models.mobilenetv2 import MobileNetV2
 from nn_models.resnet import ResNet
@@ -129,6 +128,15 @@ def train(model, dataset, epochs, batch_size):
         os.makedirs(f"model_output/output_{model}_{dataset}")
     model_instance.save(f"model_output/output_{model}_{dataset}")
 
+    plt.plot(hist.history["accuracy"])
+    plt.plot(hist.history["val_accuracy"])
+    plt.title("Model accuracy")
+    plt.ylabel("Accuracy")
+    plt.xlabel("Epoch")
+    plt.legend(["Train", "Val"], loc="upper left")
+    plt.savefig(f"model_output/output_{model}_{dataset}/accuracy.png")
+    plt.clf()
+
 
 @cli.command()
 @click.option("--model", default="MobileNetV2", help="Model to test. E.g., MobileNetV2")
@@ -149,7 +157,6 @@ def test(model, dataset):
     loss, acc = model_instance.evaluate(x_test, y_test)
     print("Test accuracy: ", acc)
     print("Test loss: ", loss)
-
 
 if __name__ == "__main__":
     cli()
