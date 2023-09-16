@@ -9,13 +9,13 @@ This repository contains implementations of various neural network architectures
 ├── LICENSE
 ├── Makefile
 ├── README.md
-├── data_utils.py
-├── main.py
-├── nn_models
+├── data_utils.py       # Utilities for data processing
+├── main.py             # Main training and testing script
+├── nn_models           # Neural network model implementations
 │   ├── mobilenetv2.py
 │   ├── resnet.py
 │   └── ........ 
-└── requirements.txt
+└── requirements.txt    # Required libraries and dependencies
 ```
 
 ## Installation:
@@ -59,7 +59,7 @@ pip install -r requirements.txt
 | ResNet50        |---------| ------  |---------|
 | ResNet101       |---------| ------  |---------|
 | MobileNetV2     |---------| ------  |---------|
-| DenseNet121     |---------| ------  |---------|
+| DenseNet121     |7043658| ------  |---------|
 | VGG16           |---------| ------  |---------|
 
 ## Feedback & Contribution
