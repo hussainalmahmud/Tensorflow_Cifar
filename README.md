@@ -2,7 +2,7 @@
 
 
 
-| Model           | Acc.    |
+| Model           |Test Acc.|
 |-----------------|---------|
 | ResNet18        | ------  |
 | ResNet50        | ------  |
@@ -10,4 +10,3 @@
 | MobileNetV2     | ------  |
 | DenseNet121     | ------  |
 | VGG16           | ------  |
-

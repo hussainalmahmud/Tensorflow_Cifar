@@ -3,14 +3,13 @@ from tensorflow.keras.datasets import cifar10, cifar100
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 
-def read_data(dataset="cifar100" ,validation_split=0.1):
+def read_data(dataset="cifar100", validation_split=0.1):
     """Returns the CIFAR-10 dataset"""
     if dataset == "cifar10":
-
         (x_train, y_train), (x_test, y_test) = cifar10.load_data()
-        
-        x_train = x_train.astype('float32') / 255.0
-        x_test = x_test.astype('float32') / 255.0
+
+        x_train = x_train.astype("float32") / 255.0
+        x_test = x_test.astype("float32") / 255.0
 
         # Splitting out validation data from training data
         validation_length = int(validation_split * len(x_train))
@@ -21,8 +20,8 @@ def read_data(dataset="cifar100" ,validation_split=0.1):
         # load cifar100
         (x_train, y_train), (x_test, y_test) = cifar100.load_data()
 
-        x_train = x_train.astype('float32') / 255.0
-        x_test = x_test.astype('float32') / 255.0
+        x_train = x_train.astype("float32") / 255.0
+        x_test = x_test.astype("float32") / 255.0
 
         # Splitting out validation data from training data
         validation_length = int(validation_split * len(x_train))
@@ -31,9 +30,7 @@ def read_data(dataset="cifar100" ,validation_split=0.1):
     else:
         raise ValueError("dataset must be either 'cifar10' or 'cifar100'")
 
-
     return x_train, y_train, x_val, y_val, x_test, y_test
-
 
 
 def data_augmentation_generator():
@@ -43,8 +40,7 @@ def data_augmentation_generator():
         width_shift_range=0.1,
         height_shift_range=0.1,
         horizontal_flip=True,
-        fill_mode='nearest'
+        fill_mode="nearest",
     )
-    
-    return datagen
 
+    return datagen
