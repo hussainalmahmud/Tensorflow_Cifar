@@ -5,11 +5,11 @@ install:
 lint:
 	pylint --disable=R,C main.py
 
-# test:
-# 	pytest -vv --cov-report term-missing --cov=app test_*.py
+test:
+	pytest -vv --cov-report term-missing --cov=main tests/
 
 format:
 	black *.py
 
-# all: install lint test format
-all: install lint format
+all: install lint format test
+# all: install lint format
