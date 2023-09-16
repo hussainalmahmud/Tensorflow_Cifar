@@ -2,7 +2,7 @@ import os
 import click
 import tensorflow as tf
 import pandas as pd
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from data_utils import read_data, data_augmentation_generator
 from nn_models.mobilenetv2 import MobileNetV2
 from nn_models.resnet import ResNet
