@@ -3,7 +3,7 @@ astunparse==1.6.3
 autograd==1.5
 brotlipy==0.7.0
 cachetools==5.3.1
-conda==4.13.0
+#conda==4.13.0
 flatbuffers==23.5.26
 fonttools==4.25.0
 future==0.18.3
