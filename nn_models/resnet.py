@@ -47,7 +47,7 @@ class ResidualBlock(tf.keras.layers.Layer):
         return x
 
 class ResNet:
-    def __init__(self, variant='resnet50', num_classes=1000):
+    def __init__(self, variant='resnet50', num_classes=10):
         configs = {
             'resnet18': [2, 2, 2, 2],
             'resnet34': [3, 4, 6, 3],

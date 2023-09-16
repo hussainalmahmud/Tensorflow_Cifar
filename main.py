@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 from data_utils import read_data, data_augmentation_generator
 from nn_models.mobilenetv2 import MobileNetV2
 from nn_models.resnet import ResNet
+from nn_models.densenet import DenseNet
+from nn_models.vgg import VGG16
 
 
 @click.group()
@@ -47,6 +49,8 @@ AVAILABLE_MODELS = [
     "ResNet50",
     "ResNet101",
     "ResNet152",
+    "DenseNet121",
+    "VGG16",
 ]  # Add or remove model names as needed.
 
 
@@ -102,6 +106,10 @@ def train(model, dataset, epochs, batch_size):
         model_instance = ResNet("resnet101", num_classes).build()
     elif model == "ResNet152":
         model_instance = ResNet("resnet152", num_classes).build()
+    elif model == "DenseNet121":
+        model_instance = DenseNet("densenet121", num_classes).build()
+    elif model == "VGG16":
+        model_instance = VGG16(num_classes).build()
     else:
         raise ValueError("model must be selected e.g., 'MobileNetV2', 'ResNet18'")
 
@@ -157,6 +165,7 @@ def test(model, dataset):
     loss, acc = model_instance.evaluate(x_test, y_test)
     print("Test accuracy: ", acc)
     print("Test loss: ", loss)
+
 
 if __name__ == "__main__":
     cli()
