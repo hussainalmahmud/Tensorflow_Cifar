@@ -1,3 +1,5 @@
+[![Python CI](https://github.com/hussainsan/tensorflow_cifar/actions/workflows/python_ci.yml/badge.svg)](https://github.com/hussainsan/tensorflow_cifar/actions/workflows/python_ci.yml)
+
 # Train CIFAR10/Cifar100 with Tensorflow 2
 
 This repository contains implementations of various neural network architectures trained on the [CIFAR10 and CIFAR100](https://www.cs.toronto.edu/~kriz/cifar.html) datasets using TensorFlow 2. The CIFAR10 and CIFAR100 datasets consist of 60,000 32x32 color images in 10 and 100 classes, respectively.
