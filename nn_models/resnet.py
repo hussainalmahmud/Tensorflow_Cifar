@@ -79,20 +79,8 @@ class ResNet:
                 increase_filters = x.shape[-1] != filters
                 x = ResidualBlock(filters, stride=stride, use_bottleneck=self.use_bottleneck, increase_filters=increase_filters)(x)
 
-        # for i, block_config in enumerate(self.config['blocks']):
-        #     filters = self.config['filters'][i + 1]  # We start from the second value in the filters list
-        #     for j in range(block_config):
-        #         stride = 2 if j == 0 and filters != self.config['filters'][1] else 1
-        #         # Determine if we need to increase the filters for the shortcut
-                
-        #         x = ResidualBlock(filters, stride=stride, use_bottleneck=self.use_bottleneck)(x)
-
         x = GlobalAveragePooling2D()(x)
         output_tensor = Dense(self.num_classes, activation='softmax')(x)
 
         model = Model(inputs=input_tensor, outputs=output_tensor)
         return model
-
-# # Example usage:
-# resnet50 = ResNet('resnet50').build()
-# resnet50.summary()
