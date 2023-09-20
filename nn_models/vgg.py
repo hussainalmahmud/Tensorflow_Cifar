@@ -39,5 +39,5 @@ class VGG16:
         return model
 
 # Example usage:
-vgg16 = VGG16(num_classes=10).build()
-vgg16.summary()
+# vgg16 = VGG16(num_classes=10).build()
+# vgg16.summary()

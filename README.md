@@ -55,14 +55,16 @@ pip install -r requirements.txt
 
 ## Currently Training and Testing the models. Results will be published soon. 
 
-| Model           |Parameters|CIFAR10 Test Acc.| CIFAR100 Test Acc.|
-|-----------------|---------|---------|---------|
-| ResNet18        |---------| ------  |---------|
-| ResNet50        |---------| ------  |---------|
-| ResNet101       |---------| ------  |---------|
-| MobileNetV2     |---------| ------  |---------|
-| DenseNet121     |7043658| ------  |---------|
-| VGG16           |---------| ------  |---------|
+| Model           |Parameters (M)|CIFAR10 Test Acc.|
+|-----------------|---------|---------|
+| ResNet18        |11184650| 92.36%	  |
+| ResNet34        |21311754| 92.39%	  |
+| ResNet50        |23547402| 92.04%	  |
+| ResNet101       |42565642| 91.52%	  |
+| ResNet152       |58232330| 91.30%	  |
+| MobileNetV2     |2952362| ------  |
+| DenseNet121     |7043658| 91.86%	  |
+| VGG16           |33638218| 91.86%	  |
 
 ## Feedback & Contribution
 Feedback is always welcome! If you have suggestions or want to contribute to this repository, please create an issue or a pull request.
