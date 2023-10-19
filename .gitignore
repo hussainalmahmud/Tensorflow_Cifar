@@ -5,3 +5,7 @@ __pycache__/
 *.egg-info/
 *.egg
 *.coverage
+model_output/
+.pytest_cache/
+```
+__pycache__/
